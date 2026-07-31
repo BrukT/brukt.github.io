@@ -3,6 +3,9 @@
 As you probably know, I am **Bruk Gurmesa**.<be>
 I am into Scalable Solutions whether it is big data processing or inference. 
 
+### Article 
+De normalizing cdc stream on realtime [Medium Article](https://medium.com/@bruk101/real-time-cdc-stream-denormalization-using-apache-beam-timely-stateful-processing-e4a49d0ec478)
+
 ### Cloud Certifications
 #### AWS Certified Machine Learning Speciality (MLS-C01)
 [https://www.credly.com/badges/ac447329-747e-4fa6-8c23-7306920230b9/public_url](https://www.credly.com/badges/ac447329-747e-4fa6-8c23-7306920230b9/public_url)
