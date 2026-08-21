@@ -37,11 +37,8 @@ body {background:#f7fbfb}
     <div class="w3-third">
 
       <div class="w3-white w3-text-grey w3-card-4">
-        <div class="w3-display-container">
-          <img src="/w3images/avatar_hat.jpg" style="width:100%" alt="Avatar">
-          <div class="w3-display-bottomleft w3-container w3-text-black">
-            <h2>BRUK GURMESA</h2>
-          </div>
+        <div style="padding:18px 16px;">
+          <h2 style="margin:0;">BRUK GURMESA</h2>
         </div>
         <div class="w3-container">
           <p class="w3-large"><b>Data &amp; ML Engineer (GCP / AWS)</b></p>
@@ -89,80 +86,75 @@ body {background:#f7fbfb}
 
       <div class="w3-container w3-card w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-        {% for exp in site.data.experiences %}
+
+        <!-- Static rendering of experiences for preview -->
         <div class="w3-container w3-card exp-card w3-padding-small w3-margin-bottom">
           <div class="w3-row">
             <div class="w3-col s8 m9">
-              <h4 class="w3-margin-0"><b>{{ exp.title }}</b></h4>
-              <div class="w3-opacity"><strong>{{ exp.company }}</strong> {% if exp.location %}• {{ exp.location }}{% endif %}</div>
+              <h4 class="w3-margin-0"><b>Data Engineer</b></h4>
+              <div class="w3-opacity"><strong>Ford Motor Company</strong> • USA</div>
             </div>
             <div class="w3-col s4 m3 w3-right-align">
-              <div class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
-                {{ exp.start }}{% if exp.end and exp.end != "Current" %} - {{ exp.end }}{% elsif exp.end == "Current" %} - <span class="w3-tag w3-teal w3-round">Current</span>{% endif %}
-              </div>
+              <div class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2023 - <span class="w3-tag w3-teal w3-round">Current</span></div>
             </div>
           </div>
-
-          {% if exp.summary %}
-          <p class="exp-summary">{{ exp.summary }}</p>
-          {% endif %}
-
-          {% if exp.responsibilities %}
+          <p class="exp-summary">Landing, curating and publishing manufacturing IoT data for BI dashboards, ML model training, and real-time inference while enforcing GDPR/CCPA protections.</p>
           <ul class="resp-list">
-            {% for item in exp.responsibilities %}
-              <li>{{ item }}</li>
-            {% endfor %}
+            <li>Delivered sub‑3s end-to-end streaming pipelines for real‑time anomaly detection and inference.</li>
+            <li>Reduced cloud processing costs by migrating heavy transforms to horizontally scalable low‑memory architectures.</li>
+            <li>Led cost‑savings and vulnerability remediation initiatives, adding automated tests to verify upgrades.</li>
           </ul>
-          {% endif %}
-
-          {% if exp.technologies %}
-            <div class="tech-badges">
-              {% for tech in exp.technologies %}
-                {% assign icon = "fa-code" %}
-                {% case tech %}
-                  {% when "GCP Dataflow" %}{% assign icon = "fa-cloud" %}
-                  {% when "BigQuery" %}{% assign icon = "fa-database" %}
-                  {% when "Dataproc" %}{% assign icon = "fa-server" %}
-                  {% when "Vertex AI" %}{% assign icon = "fa-robot" %}
-                  {% when "Terraform" %}{% assign icon = "fa-hammer" %}
-                  {% when "Confluent Kafka" %}{% assign icon = "fa-exchange" %}
-                  {% when "Pub/Sub" %}{% assign icon = "fa-signal" %}
-                  {% when "Airflow" %}{% assign icon = "fa-tasks" %}
-                  {% when "PySpark" %}{% assign icon = "fa-cogs" %}
-                  {% when "AWS Glue" %}{% assign icon = "fa-cloud-upload" %}
-                {% endcase %}
-                <span class="tech-badge"><i class="fa {{ icon }}"></i>{{ tech }}</span>
-              {% endfor %}
-            </div>
-          {% endif %}
-
-        </div>
-        {% endfor %}
-      </div>
-
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-folder-open fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects</h2>
-        <div class="w3-row-padding">
-          <div class="w3-col s12 m6">
-            <div class="w3-card w3-padding">
-              <h4><a href="https://github.com/BrukT/real-time-cdc-demo" target="_blank">Real-time CDC demo</a></h4>
-              <p>Code examples and Apache Beam demos for the Medium article on CDC stream denormalization.</p>
-            </div>
-          </div>
-          <div class="w3-col s12 m6">
-            <div class="w3-card w3-padding">
-              <h4><a href="https://github.com/BrukT/data-pipelines-examples" target="_blank">Data Pipelines Examples</a></h4>
-              <p>Collection of ETL/ELT patterns, Jinja2 templating for Airflow DAGs and PySpark notebooks.</p>
-            </div>
-          </div>
-          <div class="w3-col s12 m6" style="margin-top:12px">
-            <div class="w3-card w3-padding">
-              <h4><a href="https://github.com/BrukT/model-deploy-examples" target="_blank">ML Model Deployment</a></h4>
-              <p>Examples of Vertex AI training inputs, TFRecord pipelines and endpoint deployments.</p>
-            </div>
+          <div class="tech-badges">
+            <span class="tech-badge"><i class="fa fa-cloud"></i> GCP Dataflow</span>
+            <span class="tech-badge"><i class="fa fa-database"></i> BigQuery</span>
+            <span class="tech-badge"><i class="fa fa-robot"></i> Vertex AI</span>
           </div>
         </div>
+
+        <div class="w3-container w3-card exp-card w3-padding-small w3-margin-bottom">
+          <div class="w3-row">
+            <div class="w3-col s8 m9">
+              <h4 class="w3-margin-0"><b>GCP Data Engineer / Consultant</b></h4>
+              <div class="w3-opacity"><strong>Reply S.p.A (various clients)</strong></div>
+            </div>
+            <div class="w3-col s4 m3 w3-right-align">
+              <div class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nov 2020 - Apr 2023</div>
+            </div>
+          </div>
+          <p class="exp-summary">Consulted across finance and retail clients to integrate on-prem architecture with GCP and migrate/standardize ETL pipelines, orchestration, and observability.</p>
+          <ul class="resp-list">
+            <li>Designed hybrid GCP/on‑prem integration enabling Dataproc jobs to run securely with BigQuery sinks.</li>
+            <li>Built a Jinja2-based template library to auto-generate Airflow DAGs and reduce pipeline setup time.</li>
+          </ul>
+          <div class="tech-badges">
+            <span class="tech-badge"><i class="fa fa-server"></i> Dataproc</span>
+            <span class="tech-badge"><i class="fa fa-database"></i> BigQuery</span>
+            <span class="tech-badge"><i class="fa fa-tasks"></i> Airflow</span>
+          </div>
+        </div>
+
+        <div class="w3-container w3-card exp-card w3-padding-small w3-margin-bottom">
+          <div class="w3-row">
+            <div class="w3-col s8 m9">
+              <h4 class="w3-margin-0"><b>Data Engineer (Levi Strauss &amp; Co)</b></h4>
+              <div class="w3-opacity"><strong>Levi Strauss &amp; Co (via Reply)</strong></div>
+            </div>
+            <div class="w3-col s4 m3 w3-right-align">
+              <div class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - 2022</div>
+            </div>
+          </div>
+          <p class="exp-summary">Maintained Spark pipelines for analytics and ML on AWS; integrated metadata collection for observability and templated pipeline generation.</p>
+          <ul class="resp-list">
+            <li>Improved data quality and reduced ETL failures by optimizing SparkSQL and adding metadata-driven observability.</li>
+          </ul>
+          <div class="tech-badges">
+            <span class="tech-badge"><i class="fa fa-cogs"></i> PySpark</span>
+            <span class="tech-badge"><i class="fa fa-database"></i> SparkSQL</span>
+          </div>
+        </div>
+
       </div>
+
 
       <div class="w3-container w3-card w3-white">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
