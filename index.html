@@ -88,7 +88,7 @@ body {background:#f7fbfb}
 
     <!-- Right Column -->
     <div class="w3-twothird">
-    
+
       <div class="w3-container w3-card w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
         {% for exp in site.data.experiences %}
@@ -142,24 +142,42 @@ body {background:#f7fbfb}
         {% endfor %}
       </div>
 
+      <div class="w3-container w3-card w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-folder-open fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Projects</h2>
+        <div class="w3-row-padding">
+          <div class="w3-col s12 m6">
+            <div class="w3-card w3-padding">
+              <h4><a href="https://github.com/BrukT/real-time-cdc-demo" target="_blank">Real-time CDC demo</a></h4>
+              <p>Code examples and Apache Beam demos for the Medium article on CDC stream denormalization.</p>
+            </div>
+          </div>
+          <div class="w3-col s12 m6">
+            <div class="w3-card w3-padding">
+              <h4><a href="https://github.com/BrukT/data-pipelines-examples" target="_blank">Data Pipelines Examples</a></h4>
+              <p>Collection of ETL/ELT patterns, Jinja2 templating for Airflow DAGs and PySpark notebooks.</p>
+            </div>
+          </div>
+          <div class="w3-col s12 m6" style="margin-top:12px">
+            <div class="w3-card w3-padding">
+              <h4><a href="https://github.com/BrukT/model-deploy-examples" target="_blank">ML Model Deployment</a></h4>
+              <p>Examples of Vertex AI training inputs, TFRecord pipelines and endpoint deployments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="w3-container w3-card w3-white">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>W3Schools.com</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Forever</h6>
-          <p>Web Development! All I need to know in one place</p>
+          <h5 class="w3-opacity"><b>Master of Science in Computer Engineering</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>University of Pisa — 2018 - 2020</h6>
+          <p>Computer Systems and Networking Specialization. Thesis: Integration of CoAP-based sensors into KubeEdge Fog/Edge platform.</p>
           <hr>
         </div>
         <div class="w3-container">
-          <h5 class="w3-opacity"><b>London Business School</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015</h6>
-          <p>Master Degree</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>School of Coding</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2013</h6>
-          <p>Bachelor Degree</p><br>
+          <h5 class="w3-opacity"><b>Bachelor of Science in Electrical and Computer Engineering</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Hawassa University — 2011 - 2016</h6>
+          <p>Computer Engineering stream.</p><br>
         </div>
       </div>
 
