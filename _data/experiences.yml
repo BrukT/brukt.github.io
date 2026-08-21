@@ -1,0 +1,17 @@
+- title: "Front End Developer"
+  company: "w3schools.com"
+  start: "Jan 2015"
+  end: "Current"
+  description: "Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste."
+
+- title: "Web Developer"
+  company: "something.com"
+  start: "Mar 2012"
+  end: "Dec 2014"
+  description: "Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste."
+
+- title: "Graphic Designer"
+  company: "designsomething.com"
+  start: "Jun 2010"
+  end: "Mar 2012"
+  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
