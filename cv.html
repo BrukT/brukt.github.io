@@ -11,12 +11,18 @@ layout: null
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-.tech-badges {margin-top:6px}
-.tech-badge {display:inline-block;background:#e8f6f6;color:#006b6b;padding:4px 8px;margin:2px;border-radius:12px;font-size:12px}
-.exp-summary {font-style:normal;color:#333}
-.exp-card {transition: box-shadow 180ms ease}
-.exp-card:hover {box-shadow: 0 6px 18px rgba(0,0,0,0.12)}
+.tech-badges {margin-top:10px}
+.tech-badge {display:inline-flex;align-items:center;background:#eaf7f6;color:#054a49;padding:6px 10px;margin:4px;border-radius:14px;font-size:13px}
+.tech-badge i {margin-right:8px;font-size:14px}
+.exp-summary {font-style:normal;color:#333;margin-top:6px}
+.exp-card {transition: box-shadow 200ms ease;border-radius:8px;padding:14px}
+.exp-card:hover {box-shadow: 0 10px 30px rgba(6,22,34,0.12)}
 .resp-list {margin-top:8px;margin-bottom:8px}
+h2.w3-text-grey {color:#0b5353}
+h4 {color:#08393a;margin-bottom:6px}
+body {background:#f7fbfb}
+.w3-container.w3-card.w3-white {background:#ffffff;border:0}
+.w3-content {padding:24px}
 </style>
 <body class="w3-light-grey">
 
@@ -118,7 +124,20 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           {% if exp.technologies %}
             <div class="tech-badges">
               {% for tech in exp.technologies %}
-                <span class="tech-badge">{{ tech }}</span>
+                {% assign icon = "fa-code" %}
+                {% case tech %}
+                  {% when "GCP Dataflow" %}{% assign icon = "fa-cloud" %}
+                  {% when "BigQuery" %}{% assign icon = "fa-database" %}
+                  {% when "Dataproc" %}{% assign icon = "fa-server" %}
+                  {% when "Vertex AI" %}{% assign icon = "fa-robot" %}
+                  {% when "Terraform" %}{% assign icon = "fa-hammer" %}
+                  {% when "Confluent Kafka" %}{% assign icon = "fa-exchange" %}
+                  {% when "Pub/Sub" %}{% assign icon = "fa-signal" %}
+                  {% when "Airflow" %}{% assign icon = "fa-tasks" %}
+                  {% when "PySpark" %}{% assign icon = "fa-cogs" %}
+                  {% when "AWS Glue" %}{% assign icon = "fa-cloud-upload" %}
+                {% endcase %}
+                <span class="tech-badge"><i class="fa {{ icon }}"></i>{{ tech }}</span>
               {% endfor %}
             </div>
           {% endif %}

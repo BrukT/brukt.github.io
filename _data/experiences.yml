@@ -5,11 +5,11 @@
   location: "USA"
   summary: "Landing, curating and publishing manufacturing IoT data for BI dashboards, ML model training, and real-time inference while enforcing GDPR/CCPA protections."
   responsibilities:
-    - "Built real-time streaming pipelines (sub-3s latency) using GCP Dataflow, Confluent Kafka and Pub/Sub for anomaly detection and inference."
-    - "Optimized pipelines to reduce cloud cost by moving from high-memory instances to horizontally scalable low-memory transforms."
-    - "Led cloud cost-saving initiatives and periodic dependency/container vulnerability assessments; wrote tests to validate upgrades."
-    - "Collaborated with data scientists to prepare live data for business metrics dashboards and optimize model training (TFRecord pipelines, Vertex AI)."
-    - "Implemented CI/CD for data pipelines and infra with Cloud Build, Tekton and Terraform; monitored latency using Looker Studio." 
+    - "Delivered sub‑3s end-to-end streaming pipelines for real‑time anomaly detection and inference."
+    - "Reduced cloud processing costs by migrating heavy transforms to horizontally scalable low‑memory architectures."
+    - "Led cost‑savings and vulnerability remediation initiatives, adding automated tests to verify upgrades."
+    - "Enabled faster ML experimentation by producing TFRecord training pipelines and deploying models to Vertex AI endpoints."
+    - "Introduced CI/CD for data pipelines and infra (Cloud Build, Tekton, Terraform) and created dashboards to monitor latency."
   technologies:
     - "GCP Dataflow"
     - "BigQuery"
@@ -25,10 +25,10 @@
   end: "Apr 2023"
   summary: "Consulted across finance and retail clients to integrate on-prem architecture with GCP and migrate/standardize ETL pipelines, orchestration, and observability." 
   responsibilities:
-    - "Designed hybrid architectures to integrate on-prem systems with GCP Dataproc and BigQuery for Intesa Sanpaolo."
-    - "Proposed cost-effective Dataproc + GCS + BigQuery patterns and VPC designs for secure on-prem access."
-    - "Built reusable Jinja2 templates to generate Airflow DAGs and standardized pipeline scaffolding."
-    - "Migrated Dataiku/legacy ETL to Airflow+EMR and helped adopt Feature Store components on GCP for ML workflows."
+    - "Designed hybrid GCP/on‑prem integration enabling Dataproc jobs to run securely with BigQuery sinks."
+    - "Proposed Dataproc+GCS+BigQuery patterns and VPC designs to optimize cost and security."
+    - "Built a Jinja2-based template library to auto-generate Airflow DAGs and reduce pipeline setup time."
+    - "Migrated legacy Dataiku ETL to Airflow+EMR and helped onboard Feature Store components for ML workflows."
   technologies:
     - "GCP Dataproc"
     - "BigQuery"
@@ -43,8 +43,8 @@
   end: "2022"
   summary: "Maintained Spark pipelines for analytics and ML on AWS; integrated metadata collection for observability and templated pipeline generation." 
   responsibilities:
-    - "Optimized SparkSQL queries to address schema drift and data quality issues; implemented metadata collection for observability."
-    - "Created Jinja2 templates to convert YAML specs into Airflow DAGs; supported data scientists with Jupyter/Dataproc for exploration."
+    - "Improved data quality and reduced ETL failures by optimizing SparkSQL and adding metadata-driven observability."
+    - "Automated DAG generation from YAML specs, speeding pipeline deployments and supporting data-science exploration."
   technologies:
     - "PySpark"
     - "SparkSQL"
@@ -57,8 +57,8 @@
   end: "2020"
   summary: "Optimized on-prem PySpark workloads and proposed migration architecture to AWS serverless services." 
   responsibilities:
-    - "Optimized PySpark scripts for Hadoop/Hive using caching and broadcast joins."
-    - "Designed AWS Glue-based migration patterns and Step Functions orchestration for ETL flows."
+    - "Cut job runtime and resource waste by optimizing PySpark scripts with caching and broadcast joins."
+    - "Architected AWS Glue migration patterns and Step Functions orchestration for serverless ETL."
   technologies:
     - "PySpark"
     - "AWS Glue"
@@ -70,8 +70,8 @@
   end: "Sep 2018"
   summary: "Research and teaching support: data simulation, sensor data collection, visualization and scripting in Python/R." 
   responsibilities:
-    - "Wrote Python and R scripts to clean and analyze research data and built visualizations for reports."
-    - "Assisted labs and delivered programming tutorials." 
+    - "Developed reproducible Python/R scripts for simulations and visualizations used in research reports."
+    - "Delivered programming tutorials and lab support that improved student outcomes." 
   technologies:
     - "Python"
     - "R"
@@ -82,8 +82,8 @@
   end: "Feb 2016"
   summary: "Worked on teaching tablet apps and cognitive robotics projects; trained speech-to-text models for Amharic." 
   responsibilities:
-    - "Implemented Android/GoDot 3D environments and prepared assets via Blender."
-    - "Worked on Sphinx-based speech-to-text data labeling and training for Amharic." 
+    - "Built GoDot-based 3D educational environments and prepared Blender assets."
+    - "Led Amharic speech-to-text data labeling and model training pipelines using Sphinx." 
   technologies:
     - "Java"
     - "GoDot"
