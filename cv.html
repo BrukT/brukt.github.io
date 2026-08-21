@@ -1,6 +1,9 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Bruk Gurmessa — Resume</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -8,6 +11,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+.tech-badges {margin-top:6px}
+.tech-badge {display:inline-block;background:#e8f6f6;color:#006b6b;padding:4px 8px;margin:2px;border-radius:12px;font-size:12px}
+.exp-summary {font-style:normal;color:#333}
+.exp-card {transition: box-shadow 180ms ease}
+.exp-card:hover {box-shadow: 0 6px 18px rgba(0,0,0,0.12)}
+.resp-list {margin-top:8px;margin-bottom:8px}
 </style>
 <body class="w3-light-grey">
 
@@ -81,13 +90,39 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       <div class="w3-container w3-card w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
         {% for exp in site.data.experiences %}
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>{{ exp.title }} / {{ exp.company }}</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{ exp.start }}{% if exp.end and exp.end != "Current" %} - {{ exp.end }}{% elsif exp.end == "Current" %} - <span class="w3-tag w3-teal w3-round">Current</span>{% endif %}</h6>
-          <p>{{ exp.description }}</p>
-          {% unless forloop.last %}
-            <hr>
-          {% endunless %}
+        <div class="w3-container w3-card exp-card w3-padding-small w3-margin-bottom">
+          <div class="w3-row">
+            <div class="w3-col s8 m9">
+              <h4 class="w3-margin-0"><b>{{ exp.title }}</b></h4>
+              <div class="w3-opacity"><strong>{{ exp.company }}</strong> {% if exp.location %}• {{ exp.location }}{% endif %}</div>
+            </div>
+            <div class="w3-col s4 m3 w3-right-align">
+              <div class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
+                {{ exp.start }}{% if exp.end and exp.end != "Current" %} - {{ exp.end }}{% elsif exp.end == "Current" %} - <span class="w3-tag w3-teal w3-round">Current</span>{% endif %}
+              </div>
+            </div>
+          </div>
+
+          {% if exp.summary %}
+          <p class="exp-summary">{{ exp.summary }}</p>
+          {% endif %}
+
+          {% if exp.responsibilities %}
+          <ul class="resp-list">
+            {% for item in exp.responsibilities %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          {% if exp.technologies %}
+            <div class="tech-badges">
+              {% for tech in exp.technologies %}
+                <span class="tech-badge">{{ tech }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+
         </div>
         {% endfor %}
       </div>
