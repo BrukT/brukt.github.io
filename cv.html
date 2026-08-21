@@ -1,6 +1,9 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Bruk Gurmessa — Resume</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -8,6 +11,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+.tech-badges {margin-top:10px}
+.tech-badge {display:inline-flex;align-items:center;background:#eaf7f6;color:#054a49;padding:6px 10px;margin:4px;border-radius:14px;font-size:13px}
+.tech-badge i {margin-right:8px;font-size:14px}
+.exp-summary {font-style:normal;color:#333;margin-top:6px}
+.exp-card {transition: box-shadow 200ms ease;border-radius:8px;padding:14px}
+.exp-card:hover {box-shadow: 0 10px 30px rgba(6,22,34,0.12)}
+.resp-list {margin-top:8px;margin-bottom:8px}
+h2.w3-text-grey {color:#0b5353}
+h4 {color:#08393a;margin-bottom:6px}
+body {background:#f7fbfb}
+.w3-container.w3-card.w3-white {background:#ffffff;border:0}
+.w3-content {padding:24px}
 </style>
 <body class="w3-light-grey">
 
@@ -81,13 +96,52 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       <div class="w3-container w3-card w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
         {% for exp in site.data.experiences %}
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>{{ exp.title }} / {{ exp.company }}</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>{{ exp.start }}{% if exp.end and exp.end != "Current" %} - {{ exp.end }}{% elsif exp.end == "Current" %} - <span class="w3-tag w3-teal w3-round">Current</span>{% endif %}</h6>
-          <p>{{ exp.description }}</p>
-          {% unless forloop.last %}
-            <hr>
-          {% endunless %}
+        <div class="w3-container w3-card exp-card w3-padding-small w3-margin-bottom">
+          <div class="w3-row">
+            <div class="w3-col s8 m9">
+              <h4 class="w3-margin-0"><b>{{ exp.title }}</b></h4>
+              <div class="w3-opacity"><strong>{{ exp.company }}</strong> {% if exp.location %}• {{ exp.location }}{% endif %}</div>
+            </div>
+            <div class="w3-col s4 m3 w3-right-align">
+              <div class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
+                {{ exp.start }}{% if exp.end and exp.end != "Current" %} - {{ exp.end }}{% elsif exp.end == "Current" %} - <span class="w3-tag w3-teal w3-round">Current</span>{% endif %}
+              </div>
+            </div>
+          </div>
+
+          {% if exp.summary %}
+          <p class="exp-summary">{{ exp.summary }}</p>
+          {% endif %}
+
+          {% if exp.responsibilities %}
+          <ul class="resp-list">
+            {% for item in exp.responsibilities %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+
+          {% if exp.technologies %}
+            <div class="tech-badges">
+              {% for tech in exp.technologies %}
+                {% assign icon = "fa-code" %}
+                {% case tech %}
+                  {% when "GCP Dataflow" %}{% assign icon = "fa-cloud" %}
+                  {% when "BigQuery" %}{% assign icon = "fa-database" %}
+                  {% when "Dataproc" %}{% assign icon = "fa-server" %}
+                  {% when "Vertex AI" %}{% assign icon = "fa-robot" %}
+                  {% when "Terraform" %}{% assign icon = "fa-hammer" %}
+                  {% when "Confluent Kafka" %}{% assign icon = "fa-exchange" %}
+                  {% when "Pub/Sub" %}{% assign icon = "fa-signal" %}
+                  {% when "Airflow" %}{% assign icon = "fa-tasks" %}
+                  {% when "PySpark" %}{% assign icon = "fa-cogs" %}
+                  {% when "AWS Glue" %}{% assign icon = "fa-cloud-upload" %}
+                {% endcase %}
+                <span class="tech-badge"><i class="fa {{ icon }}"></i>{{ tech }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+
         </div>
         {% endfor %}
       </div>
