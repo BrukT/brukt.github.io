@@ -1,4 +1,4 @@
-name: PR Preview (raw.githack)
+name: PR Preview (jsDelivr)
 
 on:
   pull_request:
@@ -8,7 +8,7 @@ jobs:
   post-preview:
     runs-on: ubuntu-latest
     steps:
-      - name: Post raw.githack preview link to PR
+      - name: Post jsDelivr preview link to PR
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -19,9 +19,9 @@ jobs:
             } else {
               const owner = context.repo.owner;
               const repo = context.repo.repo;
-              const branch = pr.head.ref;
+              const branch = encodeURIComponent(pr.head.ref);
               const path = 'index.html';
-              const url = `https://raw.githack.com/${owner}/${repo}/${branch}/${path}`;
-              const body = `Preview HTML (raw.githack): ${url}\n\nNote: raw.githack serves the branch HTML directly. If your page depends on Jekyll processing, configure Pages or use the Pages preview action.`;
+              const url = `https://cdn.jsdelivr.net/gh/${owner}/${repo}@${branch}/${path}`;
+              const body = `Preview HTML (jsDelivr): ${url}\n\nThis uses the PR branch directly and is compatible with branch names that include slashes.`;
               await github.rest.issues.createComment({ owner, repo, issue_number: pr.number, body });
             }

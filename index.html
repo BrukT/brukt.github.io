@@ -1,361 +1,557 @@
----
-layout: null
----
-<!-- pages-rebuild: harmless comment added to trigger GitHub Pages rebuild -->
 <!DOCTYPE html>
-<html>
-<title>Bruk Gurmessa — Resume</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-  html,
-  body,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Roboto", sans-serif
-  }
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bruk Gurmessa — Resume</title>
+  <meta name="description" content="Bruk Gurmessa is a data and ML engineer focused on cloud-native ETL, streaming systems, and machine learning on GCP and AWS.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    :root {
+      --bg: #eef4f3;
+      --panel: #ffffff;
+      --panel-soft: #f7faf9;
+      --sidebar-start: #f2f7f6;
+      --sidebar-end: #e4efed;
+      --muted: #4f5d63;
+      --text: #1d2a2d;
+      --heading: #0b3a3d;
+      --primary: #0e5e5f;
+      --primary-soft: #dfeff0;
+      --line: rgba(11, 58, 61, 0.12);
+      --shadow: 0 32px 80px rgba(12, 35, 39, 0.12);
+    }
 
-  .tech-badges {
-    margin-top: 10px
-  }
+    * { box-sizing: border-box; }
 
-  .tech-badge {
-    display: inline-flex;
-    align-items: center;
-    background: #eaf7f6;
-    color: #054a49;
-    padding: 6px 10px;
-    margin: 4px;
-    border-radius: 14px;
-    font-size: 13px
-  }
+    html, body {
+      margin: 0;
+      background: linear-gradient(180deg, #f5f9f8 0%, #eef4f3 100%);
+      color: var(--text);
+      font-family: "Inter", "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-  .tech-badge i {
-    margin-right: 8px;
-    font-size: 14px
-  }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
 
-  .exp-summary {
-    font-style: normal;
-    color: #333;
-    margin-top: 6px
-  }
+    a:hover { text-decoration: underline; }
 
-  .exp-card {
-    transition: box-shadow 200ms ease;
-    border-radius: 8px;
-    padding: 14px
-  }
+    .page {
+      max-width: 1200px;
+      margin: 32px auto;
+      padding: 0 18px;
+    }
 
-  .exp-card:hover {
-    box-shadow: 0 10px 30px rgba(6, 22, 34, 0.12)
-  }
+    .resume-shell {
+      display: flex;
+      background: var(--panel);
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(10, 53, 56, 0.06);
+    }
 
-  .resp-list {
-    margin-top: 8px;
-    margin-bottom: 8px
-  }
+    .sidebar {
+      width: 34%;
+      background: linear-gradient(180deg, var(--sidebar-start), var(--sidebar-end));
+      padding: 32px 28px 22px;
+      border-right: 1px solid var(--line);
+    }
 
-  h2.w3-text-grey {
-    color: #0b5353
-  }
+    .avatar-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 22px;
+    }
 
-  h4 {
-    color: #08393a;
-    margin-bottom: 6px
-  }
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0b3a3d, #1d787a 60%, #6da8a8);
+      color: #fff;
+      font-size: 2.3rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      box-shadow: 0 18px 40px rgba(7, 48, 53, 0.2);
+      border: 4px solid rgba(255,255,255,0.75);
+    }
 
-  body {
-    background: #f7fbfb
-  }
+    .name {
+      margin: 0;
+      font-size: clamp(2rem, 2vw, 2.5rem);
+      line-height: 1.1;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--heading);
+      text-align: center;
+    }
 
-  .w3-container.w3-card.w3-white {
-    background: #ffffff;
-    border: 0
-  }
+    .title {
+      margin: 14px 0 0;
+      text-align: center;
+      color: var(--primary);
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
 
-  .w3-content {
-    padding: 24px
-  }
-</style>
+    .section {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
 
-<body class="w3-light-grey">
+    .section:first-of-type {
+      margin-top: 22px;
+      padding-top: 0;
+      border-top: none;
+    }
 
-  <!-- Page Container -->
-  <div class="w3-content w3-margin-top" style="max-width:1400px;">
+    .section h3 {
+      margin: 0 0 14px;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--heading);
+      font-weight: 800;
+    }
 
-    <!-- The Grid -->
-    <div class="w3-row-padding">
+    .sidebar-copy {
+      margin: 0 0 14px;
+      line-height: 1.65;
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
 
-      <!-- Left Column -->
-      <div class="w3-third">
+    .sidebar-copy strong { color: var(--heading); }
 
-        <div class="w3-white w3-text-grey w3-card-4">
-          <div style="padding:18px 16px;">
-            <h2 style="margin:0;">BRUK GURMESA</h2>
+    .contact-list,
+    .resume-list {
+      margin: 0;
+      padding-left: 1.15rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .contact-list li,
+    .resume-list li {
+      margin-bottom: 4px;
+    }
+
+    .contact-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .contact-line i {
+      width: 18px;
+      text-align: center;
+      color: var(--primary);
+    }
+
+    .tech-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .tech-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-soft);
+      color: var(--heading);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      border: 1px solid rgba(14, 94, 95, 0.08);
+    }
+
+    .main {
+      flex: 1;
+      padding: 36px 32px 24px;
+      background: #fff;
+    }
+
+    .main-section {
+      margin-bottom: 28px;
+    }
+
+    .main-section h2 {
+      margin: 0 0 18px;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--heading);
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .experience-card {
+      background: linear-gradient(180deg, #fff, #fbfdfc);
+      border: 1px solid rgba(13, 64, 65, 0.08);
+      border-radius: 18px;
+      padding: 18px 18px 14px;
+      margin-bottom: 16px;
+      box-shadow: 0 10px 24px rgba(8, 29, 30, 0.04);
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+
+    .experience-role {
+      margin: 0;
+      font-size: 1.08rem;
+      color: var(--heading);
+      line-height: 1.35;
+    }
+
+    .experience-company {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .experience-period {
+      flex-shrink: 0;
+      color: var(--primary);
+      white-space: nowrap;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      margin-top: 3px;
+    }
+
+    .experience-summary {
+      margin: 10px 0 10px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .experience-card ul {
+      margin: 10px 0 0 1.1rem;
+      padding: 0;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .experience-card li + li {
+      margin-top: 3px;
+    }
+
+    .tech-cloud-main {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .tech-cloud-main .tech-pill {
+      background: #edf7f6;
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+
+    .education-card {
+      background: #fbfdfc;
+      border: 1px solid rgba(10, 53, 56, 0.08);
+      border-radius: 16px;
+      padding: 16px 18px;
+      margin-bottom: 12px;
+    }
+
+    .education-card h4 {
+      margin: 0 0 8px;
+      color: var(--heading);
+      font-size: 1rem;
+    }
+
+    .education-card .meta {
+      font-size: 0.85rem;
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .education-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 18px 0 10px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer .socials {
+      display: inline-flex;
+      gap: 14px;
+      margin: 8px 0;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 860px) {
+      .resume-shell {
+        display: block;
+      }
+
+      .sidebar,
+      .main {
+        width: 100%;
+        border-right: none;
+      }
+
+      .main {
+        padding-top: 18px;
+      }
+
+      .experience-header {
+        flex-direction: column;
+      }
+
+      .experience-period {
+        white-space: normal;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="resume-shell">
+      <aside class="sidebar">
+        <div class="avatar-wrap">
+          <div class="avatar" aria-label="Bruk Gurmessa initial avatar">BG</div>
+        </div>
+
+        <h1 class="name">Bruk Gurmessa</h1>
+        <p class="title">Data &amp; ML Engineer</p>
+
+        <div class="section">
+          <div class="contact-line"><i class="fa fa-map-marker"></i><span>Gaithersburg, Maryland, USA</span></div>
+          <div class="contact-line"><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/in/brukt" target="_blank" rel="noopener">LinkedIn</a></div>
+          <div class="contact-line"><i class="fa fa-github"></i><a href="https://github.com/BrukT" target="_blank" rel="noopener">GitHub</a></div>
+        </div>
+
+        <div class="section">
+          <h3>Professional Summary</h3>
+          <p class="sidebar-copy">Data &amp; ML Engineer with hands-on experience in Python, Java, SQL, and cloud-native ETL/ELT systems. I design streaming pipelines, optimize cloud costs, and deliver production-grade ML workflows on GCP and AWS.</p>
+        </div>
+
+        <div class="section">
+          <h3>Featured Article</h3>
+          <p class="sidebar-copy"><a href="https://medium.com/@bruk101/real-time-cdc-stream-denormalization-using-apache-beam-timely-stateful-processing-e4a49d0ec478" target="_blank" rel="noopener">Real-time CDC stream denormalization using Apache Beam</a></p>
+        </div>
+
+        <div class="section">
+          <h3>Certifications</h3>
+          <ul class="resume-list">
+            <li><a href="https://www.credly.com/badges/8f16d6c9-9d16-464f-9c31-c556357c0afd/public_url" target="_blank" rel="noopener">GCP Professional ML Engineer</a> — Sep 2025</li>
+            <li><a href="https://www.credly.com/badges/ac447329-747e-4fa6-8c23-7306920230b9/public_url" target="_blank" rel="noopener">AWS ML Specialty (MLS-C01)</a> — Dec 2024</li>
+            <li><a href="https://google.accredible.com/6b6e054d-aba3-40d9-9707-cbcc5b7fde3a" target="_blank" rel="noopener">GCP Data Engineer</a> — May 2023</li>
+            <li><a href="https://www.credly.com/badges/0a7a3ca7-4f42-4ad6-bc9b-148ec19e7e19/public_url" target="_blank" rel="noopener">AWS Developer Associate (DVA-C01)</a> — Feb 2022</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h3>Core Technologies</h3>
+          <div class="tech-cloud">
+            <span class="tech-pill"><i class="fa fa-cloud"></i>GCP</span>
+            <span class="tech-pill"><i class="fa fa-cube"></i>AWS</span>
+            <span class="tech-pill"><i class="fa fa-database"></i>BigQuery</span>
+            <span class="tech-pill"><i class="fa fa-robot"></i>Vertex AI</span>
           </div>
-          <div class="w3-container">
-            <p class="w3-large"><b>Data &amp; ML Engineer (GCP / AWS)</b></p>
-            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Gaithersburg, Maryland, USA</p>
-            <p>
-              <a href="https://www.linkedin.com/in/brukt" target="_blank"><i class="fa fa-linkedin"></i> LinkedIn</a>
-              &nbsp; • &nbsp;
-              <a href="https://github.com/BrukT" target="_blank"><i class="fa fa-github"></i> GitHub</a>
-            </p>
-            <hr>
+        </div>
+      </aside>
 
-            <p class="w3-text-black"><b>Professional Summary</b></p>
-            <p>Data &amp; ML Engineer with hands-on skills in Python, Java, SQL, and cloud-based ETL/ELT frameworks.
-              Experience building real-time streaming pipelines, optimizing cloud costs, and delivering ML pipelines on
-              GCP and AWS.</p>
+      <main class="main">
+        <section class="main-section">
+          <h2>Work Experience</h2>
 
-            <p class="w3-text-black"><b>Featured Article</b></p>
-            <p><a
-                href="https://medium.com/@bruk101/real-time-cdc-stream-denormalization-using-apache-beam-timely-stateful-processing-e4a49d0ec478"
-                target="_blank">Real-time CDC stream denormalization using Apache Beam</a></p>
-
-            <hr>
-
-            <p class="w3-text-black"><b>Certifications</b></p>
+          <article class="experience-card">
+            <div class="experience-header">
+              <div>
+                <h3 class="experience-role">Data Engineer</h3>
+                <div class="experience-company">Ford Motor Company • USA</div>
+              </div>
+              <div class="experience-period">May 2023 — Current</div>
+            </div>
+            <p class="experience-summary">Landing, curating, and publishing manufacturing IoT data for BI dashboards, ML training, and real-time inference while enforcing GDPR/CCPA protections.</p>
             <ul>
-              <li><a href="https://www.credly.com/badges/8f16d6c9-9d16-464f-9c31-c556357c0afd/public_url"
-                  target="_blank">GCP Certified Professional Machine Learning Engineer — Sep 2025</a></li>
-              <li><a href="https://www.credly.com/badges/ac447329-747e-4fa6-8c23-7306920230b9/public_url"
-                  target="_blank">AWS Machine Learning Specialty (MLS-C01) — Dec 2024</a></li>
-              <li><a href="https://google.accredible.com/6b6e054d-aba3-40d9-9707-cbcc5b7fde3a" target="_blank">GCP
-                  Certified Professional Data Engineer — May 2023</a></li>
-              <li><a href="https://www.credly.com/badges/0a7a3ca7-4f42-4ad6-bc9b-148ec19e7e19/public_url"
-                  target="_blank">AWS Certified Developer Associate (DVA-C01) — Feb 2022</a></li>
+              <li>Delivered sub-3s end-to-end streaming pipelines for real-time anomaly detection and inference.</li>
+              <li>Reduced cloud-processing costs by migrating heavy transforms to horizontally scalable low-memory architectures.</li>
+              <li>Led cost-savings and vulnerability-remediation initiatives, adding automated tests to verify that upgrades do not break production workflows.</li>
+              <li>Enabled faster ML experimentation by producing TFRecord training pipelines and deploying models to Vertex AI endpoints.</li>
+              <li>Introduced CI/CD for data pipelines and infrastructure (Cloud Build, Tekton, Terraform) and created dashboards to monitor latency.</li>
             </ul>
-
-            <hr>
-
-            <p class="w3-text-black"><b>Core Technologies</b></p>
-            <p class="tech-badges">
-              <span class="tech-badge"><i class="fa fa-cloud"></i> GCP</span>
-              <span class="tech-badge"><i class="fa fa-aws"></i> AWS</span>
-              <span class="tech-badge"><i class="fa fa-database"></i> BigQuery</span>
-              <span class="tech-badge"><i class="fa fa-robot"></i> Vertex AI</span>
-            </p>
-
-          </div>
-        </div><br>
-
-        <!-- End Left Column -->
-      </div>
-
-      <!-- Right Column -->
-      <div class="w3-twothird">
-
-        <div class="w3-container w3-card w3-white w3-margin-bottom">
-          <h2 class="w3-text-grey w3-padding-16"><i
-              class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-
-          <!-- Pre-rendered experiences from _data/experiences.yml -->
-
-          <div class="w3-container w3-card exp-card w3-padding-small w3-margin-bottom">
-            <div class="w3-row">
-              <div class="w3-col s8 m9">
-                <h4 class="w3-margin-0"><b>Data Engineer</b></h4>
-                <div class="w3-opacity"><strong>Ford Motor Company</strong> • USA</div>
-              </div>
-              <div class="w3-col s4 m3 w3-right-align">
-                <div class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2023 - <span
-                    class="w3-tag w3-teal w3-round">Current</span></div>
-              </div>
+            <div class="tech-cloud-main">
+              <span class="tech-pill"><i class="fa fa-cloud"></i>GCP Dataflow</span>
+              <span class="tech-pill"><i class="fa fa-database"></i>BigQuery</span>
+              <span class="tech-pill"><i class="fa fa-server"></i>Dataproc</span>
+              <span class="tech-pill"><i class="fa fa-robot"></i>Vertex AI</span>
+              <span class="tech-pill"><i class="fa fa-cogs"></i>Terraform</span>
             </div>
-            <p class="exp-summary">Landing, curating and publishing manufacturing IoT data for BI dashboards, ML model
-              training, and real-time inference while enforcing GDPR/CCPA protections.</p>
-            <ul class="resp-list">
-              <li>Delivered sub‑3s end-to-end streaming pipelines for real‑time anomaly detection and inference.</li>
-              <li>Reduced cloud processing costs by migrating heavy transforms to horizontally scalable low‑memory
-                architectures.</li>
-              <li>Led cost‑savings and vulnerability remediation initiatives, adding automated tests to verify upgrades.
-              </li>
-              <li>Enabled faster ML experimentation by producing TFRecord training pipelines and deploying models to
-                Vertex AI endpoints.</li>
-              <li>Introduced CI/CD for data pipelines and infra (Cloud Build, Tekton, Terraform) and created dashboards
-                to monitor latency.</li>
+          </article>
+
+          <article class="experience-card">
+            <div class="experience-header">
+              <div>
+                <h3 class="experience-role">GCP Data Engineer / Consultant</h3>
+                <div class="experience-company">Reply S.p.A (various clients)</div>
+              </div>
+              <div class="experience-period">Nov 2020 — Apr 2023</div>
+            </div>
+            <p class="experience-summary">Consulted across finance and retail clients to integrate on-premises architecture with GCP and to migrate and standardize ETL pipelines, orchestration, and observability.</p>
+            <ul>
+              <li>Designed hybrid GCP/on-prem integration enabling Dataproc jobs to run securely with BigQuery sinks.</li>
+              <li>Proposed Dataproc + GCS + BigQuery patterns and VPC designs to optimize cost and security.</li>
+              <li>Built a Jinja2-based template library to auto-generate Airflow DAGs and reduce pipeline setup time.</li>
+              <li>Migrated legacy Dataiku ETL to Airflow + EMR and helped onboard feature-store components for ML workflows.</li>
             </ul>
-            <div class="tech-badges">
-              <span class="tech-badge"><i class="fa fa-cloud"></i> GCP Dataflow</span>
-              <span class="tech-badge"><i class="fa fa-database"></i> BigQuery</span>
-              <span class="tech-badge"><i class="fa fa-server"></i> Dataproc</span>
-              <span class="tech-badge"><i class="fa fa-robot"></i> Vertex AI</span>
-              <span class="tech-badge"><i class="fa fa-hammer"></i> Terraform</span>
+            <div class="tech-cloud-main">
+              <span class="tech-pill"><i class="fa fa-server"></i>Dataproc</span>
+              <span class="tech-pill"><i class="fa fa-database"></i>BigQuery</span>
+              <span class="tech-pill"><i class="fa fa-cloud"></i>GCS</span>
+              <span class="tech-pill"><i class="fa fa-tasks"></i>Airflow</span>
             </div>
-          </div>
+          </article>
 
-          <div class="w3-container w3-card exp-card w3-padding-small w3-margin-bottom">
-            <div class="w3-row">
-              <div class="w3-col s8 m9">
-                <h4 class="w3-margin-0"><b>GCP Data Engineer / Consultant</b></h4>
-                <div class="w3-opacity"><strong>Reply S.p.A (various clients)</strong></div>
+          <article class="experience-card">
+            <div class="experience-header">
+              <div>
+                <h3 class="experience-role">Data Engineer (Levi Strauss &amp; Co)</h3>
+                <div class="experience-company">Levi Strauss &amp; Co (via Reply)</div>
               </div>
-              <div class="w3-col s4 m3 w3-right-align">
-                <div class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nov 2020 - Apr 2023</div>
-              </div>
+              <div class="experience-period">2021 — 2022</div>
             </div>
-            <p class="exp-summary">Consulted across finance and retail clients to integrate on-prem architecture with
-              GCP and migrate/standardize ETL pipelines, orchestration, and observability.</p>
-            <ul class="resp-list">
-              <li>Designed hybrid GCP/on‑prem integration enabling Dataproc jobs to run securely with BigQuery sinks.
-              </li>
-              <li>Proposed Dataproc+GCS+BigQuery patterns and VPC designs to optimize cost and security.</li>
-              <li>Built a Jinja2-based template library to auto-generate Airflow DAGs and reduce pipeline setup time.
-              </li>
-              <li>Migrated legacy Dataiku ETL to Airflow+EMR and helped onboard Feature Store components for ML
-                workflows.</li>
+            <p class="experience-summary">Worked as part of Levi’s EU data analytics team on price and promotion, inventory allocation, and sales forecast use cases.</p>
+            <ul>
+              <li>Maintained Spark pipelines for analytics and ML on AWS and integrated metadata collection for observability.</li>
+              <li>Improved data quality and reduced ETL failures by optimizing Spark SQL and metadata-driven observability.</li>
+              <li>Automated DAG generation from YAML specifications, speeding up pipeline deployments and supporting data science exploration.</li>
             </ul>
-            <div class="tech-badges">
-              <span class="tech-badge"><i class="fa fa-server"></i> Dataproc</span>
-              <span class="tech-badge"><i class="fa fa-database"></i> BigQuery</span>
-              <span class="tech-badge"><i class="fa fa-cloud"></i> GCS</span>
-              <span class="tech-badge"><i class="fa fa-tasks"></i> Airflow</span>
+            <div class="tech-cloud-main">
+              <span class="tech-pill"><i class="fa fa-cogs"></i>PySpark</span>
+              <span class="tech-pill"><i class="fa fa-database"></i>Spark SQL</span>
+              <span class="tech-pill"><i class="fa fa-cloud"></i>AWS S3</span>
             </div>
-          </div>
+          </article>
 
-          <div class="w3-container w3-card exp-card w3-padding-small w3-margin-bottom">
-            <div class="w3-row">
-              <div class="w3-col s8 m9">
-                <h4 class="w3-margin-0"><b>Data Engineer (Levi Strauss &amp; Co)</b></h4>
-                <div class="w3-opacity"><strong>Levi Strauss &amp; Co (via Reply)</strong></div>
+          <article class="experience-card">
+            <div class="experience-header">
+              <div>
+                <h3 class="experience-role">Big Data Engineer (CSE — Banking Services)</h3>
+                <div class="experience-company">CSE (client)</div>
               </div>
-              <div class="w3-col s4 m3 w3-right-align">
-                <div class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2021 - 2022</div>
-              </div>
+              <div class="experience-period">2020</div>
             </div>
-            <p class="exp-summary">Maintained Spark pipelines for analytics and ML on AWS; integrated metadata
-              collection for observability and templated pipeline generation.</p>
-            <ul class="resp-list">
-              <li>Improved data quality and reduced ETL failures by optimizing SparkSQL and adding metadata-driven
-                observability.</li>
-              <li>Automated DAG generation from YAML specs, speeding pipeline deployments and supporting data-science
-                exploration.</li>
-            </ul>
-            <div class="tech-badges">
-              <span class="tech-badge"><i class="fa fa-cogs"></i> PySpark</span>
-              <span class="tech-badge"><i class="fa fa-database"></i> SparkSQL</span>
-              <span class="tech-badge"><i class="fa fa-cloud"></i> AWS S3</span>
-            </div>
-          </div>
-
-          <div class="w3-container w3-card exp-card w3-padding-small w3-margin-bottom">
-            <div class="w3-row">
-              <div class="w3-col s8 m9">
-                <h4 class="w3-margin-0"><b>Big Data Engineer (CSE - Banking Services)</b></h4>
-                <div class="w3-opacity"><strong>CSE (client)</strong></div>
-              </div>
-              <div class="w3-col s4 m3 w3-right-align">
-                <div class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2020</div>
-              </div>
-            </div>
-            <p class="exp-summary">Optimized on-prem PySpark workloads and proposed migration architecture to AWS
-              serverless services.</p>
-            <ul class="resp-list">
-              <li>Cut job runtime and resource waste by optimizing PySpark scripts with caching and broadcast joins.
-              </li>
+            <p class="experience-summary">Optimized on-premises PySpark workloads and proposed migration architecture to AWS serverless services.</p>
+            <ul>
+              <li>Cut job runtime and resource waste by optimizing PySpark scripts with caching and broadcast joins.</li>
               <li>Architected AWS Glue migration patterns and Step Functions orchestration for serverless ETL.</li>
             </ul>
-            <div class="tech-badges">
-              <span class="tech-badge"><i class="fa fa-cogs"></i> PySpark</span>
-              <span class="tech-badge"><i class="fa fa-cloud-upload"></i> AWS Glue</span>
-              <span class="tech-badge"><i class="fa fa-tasks"></i> AWS Step Functions</span>
+            <div class="tech-cloud-main">
+              <span class="tech-pill"><i class="fa fa-cogs"></i>PySpark</span>
+              <span class="tech-pill"><i class="fa fa-cloud-upload"></i>AWS Glue</span>
+              <span class="tech-pill"><i class="fa fa-tasks"></i>AWS Step Functions</span>
             </div>
-          </div>
+          </article>
 
-          <div class="w3-container w3-card exp-card w3-padding-small w3-margin-bottom">
-            <div class="w3-row">
-              <div class="w3-col s8 m9">
-                <h4 class="w3-margin-0"><b>Assistant Lecturer / Researcher</b></h4>
-                <div class="w3-opacity"><strong>Hawassa University</strong></div>
+          <article class="experience-card">
+            <div class="experience-header">
+              <div>
+                <h3 class="experience-role">Assistant Lecturer / Researcher</h3>
+                <div class="experience-company">Hawassa University</div>
               </div>
-              <div class="w3-col s4 m3 w3-right-align">
-                <div class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2016 - Sep 2018</div>
-              </div>
+              <div class="experience-period">Sep 2016 — Sep 2018</div>
             </div>
-            <p class="exp-summary">Research and teaching support: data simulation, sensor data collection, visualization
-              and scripting in Python/R.</p>
-            <ul class="resp-list">
-              <li>Developed reproducible Python/R scripts for simulations and visualizations used in research reports.
-              </li>
+            <p class="experience-summary">Research and teaching support: data simulation, sensor data collection, visualization, and scripting in Python and R.</p>
+            <ul>
+              <li>Developed reproducible Python and R scripts for simulations and visualizations used in research reports.</li>
               <li>Delivered programming tutorials and lab support that improved student outcomes.</li>
             </ul>
-            <div class="tech-badges">
-              <span class="tech-badge"><i class="fa fa-code"></i> Python</span>
-              <span class="tech-badge"><i class="fa fa-code"></i> R</span>
+            <div class="tech-cloud-main">
+              <span class="tech-pill"><i class="fa fa-code"></i>Python</span>
+              <span class="tech-pill"><i class="fa fa-code"></i>R</span>
             </div>
-          </div>
+          </article>
 
-          <div class="w3-container w3-card exp-card w3-padding-small w3-margin-bottom">
-            <div class="w3-row">
-              <div class="w3-col s8 m9">
-                <h4 class="w3-margin-0"><b>Software Programmer (intern)</b></h4>
-                <div class="w3-opacity"><strong>iCog Labs</strong></div>
+          <article class="experience-card">
+            <div class="experience-header">
+              <div>
+                <h3 class="experience-role">Software Programmer (Intern)</h3>
+                <div class="experience-company">iCog Labs</div>
               </div>
-              <div class="w3-col s4 m3 w3-right-align">
-                <div class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2015 - Feb 2016</div>
-              </div>
+              <div class="experience-period">Jul 2015 — Feb 2016</div>
             </div>
-            <p class="exp-summary">Worked on teaching tablet apps and cognitive robotics projects; trained
-              speech-to-text models for Amharic.</p>
-            <ul class="resp-list">
-              <li>Built GoDot-based 3D educational environments and prepared Blender assets.</li>
+            <p class="experience-summary">Worked on teaching tablet applications and cognitive robotics projects; trained Amharic speech-to-text models.</p>
+            <ul>
+              <li>Built Godot-based 3D educational environments and prepared Blender assets.</li>
               <li>Led Amharic speech-to-text data labeling and model training pipelines using Sphinx.</li>
             </ul>
-            <div class="tech-badges">
-              <span class="tech-badge"><i class="fa fa-code"></i> Java</span>
-              <span class="tech-badge"><i class="fa fa-cogs"></i> GoDot</span>
+            <div class="tech-cloud-main">
+              <span class="tech-pill"><i class="fa fa-code"></i>Java</span>
+              <span class="tech-pill"><i class="fa fa-cogs"></i>Godot</span>
             </div>
+          </article>
+        </section>
+
+        <section class="main-section">
+          <h2>Education</h2>
+
+          <div class="education-card">
+            <h4>Master of Science in Computer Engineering</h4>
+            <div class="meta">University of Pisa — 2018 to 2020</div>
+            <p>Computer Systems and Networking specialization. Thesis: integration of CoAP-based sensors into the KubeEdge Fog/Edge platform.</p>
           </div>
 
-        </div>
-
-
-        <div class="w3-container w3-card w3-white">
-          <h2 class="w3-text-grey w3-padding-16"><i
-              class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Master of Science in Computer Engineering</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>University of Pisa — 2018 -
-              2020</h6>
-            <p>Computer Systems and Networking Specialization. Thesis: Integration of CoAP-based sensors into KubeEdge
-              Fog/Edge platform.</p>
-            <hr>
+          <div class="education-card">
+            <h4>Bachelor of Science in Electrical and Computer Engineering</h4>
+            <div class="meta">Hawassa University — 2011 to 2016</div>
+            <p>Computer Engineering stream.</p>
           </div>
-          <div class="w3-container">
-            <h5 class="w3-opacity"><b>Bachelor of Science in Electrical and Computer Engineering</b></h5>
-            <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Hawassa University — 2011 -
-              2016</h6>
-            <p>Computer Engineering stream.</p><br>
-          </div>
-        </div>
-
-        <!-- End Right Column -->
-      </div>
-
-      <!-- End Grid -->
+        </section>
+      </main>
     </div>
 
-    <!-- End Page Container -->
+    <div class="footer">
+      <div>Find me on social media.</div>
+      <div class="socials">
+        <i class="fa fa-facebook-official"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-snapchat"></i>
+        <i class="fa fa-pinterest-p"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-linkedin"></i>
+      </div>
+      <div>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" rel="noopener">w3.css</a></div>
+    </div>
   </div>
-
-  <footer class="w3-container w3-teal w3-center w3-margin-top">
-    <p>Find me on social media.</p>
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-  </footer>
-
 </body>
+</html>
