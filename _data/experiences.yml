@@ -5,9 +5,9 @@
   location: "USA"
   summary:  Worked in Ford Global Data Insights and Alaytics team helping optimize the auto manufacturing process accross timezones.
   responsibilities:
-    - "Delivered sub‑3s end-to-end streaming pipelines for real‑time anomaly detection and inference."
-    - "Reduced cloud processing costs by migrating heavy transforms to horizontally scalable low‑memory architectures."
-    - "Led cost‑savings and vulnerability remediation initiatives, adding automated tests to verify upgrades."
+    - "Delivered sub 3 sec end-to-end streaming pipeline for real‑time anomaly detection and inference."
+    - "Reduced cloud based processing costs by migrating heavy transforms to horizontally scalable low‑memory architectures."
+    - "Led cost‑savings and vulnerability remediation initiatives, adding automated tests to verify upgrades doesn't break workflows."
     - "Enabled faster ML experimentation by producing TFRecord training pipelines and deploying models to Vertex AI endpoints."
     - "Introduced CI/CD for data pipelines and infra (Cloud Build, Tekton, Terraform) and created dashboards to monitor latency."
     - "Landing, curating and publishing manufacturing IoT data for BI dashboards, ML model training, and real-time inference while enforcing GDPR/CCPA protections."
