@@ -1,188 +1,310 @@
----
-layout: null
----
 <!DOCTYPE html>
-<html>
-<title>Bruk Gurmessa — Resume</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-.tech-badges {margin-top:10px}
-.tech-badge {display:inline-flex;align-items:center;background:#eaf7f6;color:#054a49;padding:6px 10px;margin:4px;border-radius:14px;font-size:13px}
-.tech-badge i {margin-right:8px;font-size:14px}
-.exp-summary {font-style:normal;color:#333;margin-top:6px}
-.exp-card {transition: box-shadow 200ms ease;border-radius:8px;padding:14px}
-.exp-card:hover {box-shadow: 0 10px 30px rgba(6,22,34,0.12)}
-.resp-list {margin-top:8px;margin-bottom:8px}
-h2.w3-text-grey {color:#0b5353}
-h4 {color:#08393a;margin-bottom:6px}
-body {background:#f7fbfb}
-.w3-container.w3-card.w3-white {background:#ffffff;border:0}
-.w3-content {padding:24px}
-</style>
-<body class="w3-light-grey">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bruk Gurmessa — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+    :root {
+      --bg: #f4f8f7;
+      --panel: #ffffff;
+      --sidebar: #edf5f4;
+      --heading: #123a3d;
+      --text: #1d2b2d;
+      --muted: #4a5d62;
+      --primary: #0d5d5d;
+      --line: rgba(18,58,61,0.12);
+    }
 
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
 
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-  
-    <!-- Left Column -->
-    <div class="w3-third">
-    
-      <div class="w3-white w3-text-grey w3-card-4">
-        <div class="w3-display-container">
-          <img src="/w3images/avatar_hat.jpg" style="width:100%" alt="Avatar">
-          <div class="w3-display-bottomleft w3-container w3-text-black">
-            <h2>Jane Doe</h2>
-          </div>
-        </div>
-        <div class="w3-container">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Designer</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>London, UK</p>
-          <hr>
+    .cv-page {
+      max-width: 1100px;
+      margin: 24px auto;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 24px 60px rgba(12, 35, 39, 0.08);
+      display: flex;
+      overflow: hidden;
+    }
 
-          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-          <p>Adobe Photoshop</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
-          </div>
-          <p>Photography</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
-              <div class="w3-center w3-text-white">80%</div>
-            </div>
-          </div>
-          <p>Illustrator</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
-          </div>
-          <p>Media</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
-          </div>
-          <br>
+    .sidebar {
+      width: 34%;
+      background: linear-gradient(180deg, var(--sidebar), #e6f0ee);
+      padding: 28px 24px;
+      border-right: 1px solid var(--line);
+    }
 
-          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-          <p>English</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
-          </div>
-          <p>Spanish</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:55%"></div>
-          </div>
-          <p>German</p>
-          <div class="w3-light-grey w3-round-xlarge">
-            <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
-          </div>
-          <br>
-        </div>
-      </div><br>
+    .avatar {
+      width: 132px;
+      height: 132px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0d3a3d, #3b7578);
+      color: white;
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
 
-    <!-- End Left Column -->
-    </div>
+    h1 {
+      margin: 0;
+      text-align: center;
+      font-size: 2.1rem;
+      letter-spacing: 0.08em;
+      color: var(--heading);
+      text-transform: uppercase;
+    }
 
-    <!-- Right Column -->
-    <div class="w3-twothird">
-    
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-        {% for exp in site.data.experiences %}
-        <div class="w3-container w3-card exp-card w3-padding-small w3-margin-bottom">
-          <div class="w3-row">
-            <div class="w3-col s8 m9">
-              <h4 class="w3-margin-0"><b>{{ exp.title }}</b></h4>
-              <div class="w3-opacity"><strong>{{ exp.company }}</strong> {% if exp.location %}• {{ exp.location }}{% endif %}</div>
-            </div>
-            <div class="w3-col s4 m3 w3-right-align">
-              <div class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>
-                {{ exp.start }}{% if exp.end and exp.end != "Current" %} - {{ exp.end }}{% elsif exp.end == "Current" %} - <span class="w3-tag w3-teal w3-round">Current</span>{% endif %}
-              </div>
-            </div>
-          </div>
+    .subtitle {
+      margin-top: 12px;
+      text-align: center;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+    }
 
-          {% if exp.summary %}
-          <p class="exp-summary">{{ exp.summary }}</p>
-          {% endif %}
+    .section {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
 
-          {% if exp.responsibilities %}
-          <ul class="resp-list">
-            {% for item in exp.responsibilities %}
-              <li>{{ item }}</li>
-            {% endfor %}
-          </ul>
-          {% endif %}
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--heading);
+    }
 
-          {% if exp.technologies %}
-            <div class="tech-badges">
-              {% for tech in exp.technologies %}
-                {% assign icon = "fa-code" %}
-                {% case tech %}
-                  {% when "GCP Dataflow" %}{% assign icon = "fa-cloud" %}
-                  {% when "BigQuery" %}{% assign icon = "fa-database" %}
-                  {% when "Dataproc" %}{% assign icon = "fa-server" %}
-                  {% when "Vertex AI" %}{% assign icon = "fa-robot" %}
-                  {% when "Terraform" %}{% assign icon = "fa-hammer" %}
-                  {% when "Confluent Kafka" %}{% assign icon = "fa-exchange" %}
-                  {% when "Pub/Sub" %}{% assign icon = "fa-signal" %}
-                  {% when "Airflow" %}{% assign icon = "fa-tasks" %}
-                  {% when "PySpark" %}{% assign icon = "fa-cogs" %}
-                  {% when "AWS Glue" %}{% assign icon = "fa-cloud-upload" %}
-                {% endcase %}
-                <span class="tech-badge"><i class="fa {{ icon }}"></i>{{ tech }}</span>
-              {% endfor %}
-            </div>
-          {% endif %}
+    .section p,
+    .section li {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
 
-        </div>
-        {% endfor %}
+    .tech-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tech-pill {
+      background: #dfeef0;
+      color: var(--heading);
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .main {
+      flex: 1;
+      padding: 28px 26px;
+    }
+
+    .main h2 {
+      margin: 0 0 14px;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--heading);
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .job {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+      padding: 16px 18px;
+      margin-bottom: 14px;
+    }
+
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .job h3 {
+      margin: 0;
+      color: var(--heading);
+      font-size: 1.04rem;
+    }
+
+    .company {
+      margin-top: 5px;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .period {
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .job p,
+    .job li {
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    .job ul {
+      margin: 10px 0 0 1.2rem;
+      padding: 0;
+    }
+
+    @media (max-width: 760px) {
+      .cv-page {
+        display: block;
+      }
+      .sidebar, .main {
+        width: 100%;
+      }
+      .job-head {
+        flex-direction: column;
+      }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .cv-page { max-width: none; margin: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-page">
+    <aside class="sidebar">
+      <div class="avatar">BG</div>
+      <h1>Bruk Gurmessa</h1>
+      <div class="subtitle">Data &amp; ML Engineer</div>
+
+      <div class="section">
+        <h2>Profile</h2>
+        <p>Data &amp; ML Engineer with hands-on experience in Python, Java, SQL, and cloud-native ETL/ELT systems.</p>
       </div>
 
-      <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>W3Schools.com</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Forever</h6>
-          <p>Web Development! All I need to know in one place</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>London Business School</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015</h6>
-          <p>Master Degree</p>
-          <hr>
-        </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>School of Coding</b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2013</h6>
-          <p>Bachelor Degree</p><br>
-        </div>
+      <div class="section">
+        <h2>Location</h2>
+        <p>Gaithersburg, Maryland, USA</p>
       </div>
 
-    <!-- End Right Column -->
-    </div>
-    
-  <!-- End Grid -->
+      <div class="section">
+        <h2>Links</h2>
+        <p><a href="https://www.linkedin.com/in/brukt" target="_blank">LinkedIn</a><br><a href="https://github.com/BrukT" target="_blank">GitHub</a></p>
+      </div>
+
+      <div class="section">
+        <h2>Certifications</h2>
+        <ul>
+          <li>GCP Professional ML Engineer — Sep 2025</li>
+          <li>AWS ML Specialty — Dec 2024</li>
+          <li>GCP Data Engineer — May 2023</li>
+          <li>AWS Developer Associate — Feb 2022</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Tech Stack</h2>
+        <div class="tech-cloud">
+          <span class="tech-pill">GCP</span>
+          <span class="tech-pill">AWS</span>
+          <span class="tech-pill">BigQuery</span>
+          <span class="tech-pill">Vertex AI</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <h2>Work Experience</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <h3>Data Engineer</h3>
+            <div class="company">Ford Motor Company • USA</div>
+          </div>
+          <div class="period">May 2023 — Current</div>
+        </div>
+        <p>Landing, curating, and publishing manufacturing IoT data for BI dashboards, ML training, and real-time inference while enforcing GDPR/CCPA protections.</p>
+        <ul>
+          <li>Delivered sub-3s end-to-end streaming pipelines for real-time anomaly detection and inference.</li>
+          <li>Reduced cloud-processing costs by migrating heavy transforms to low-memory architectures.</li>
+          <li>Introduced CI/CD for data pipelines and infrastructure using Cloud Build, Tekton, and Terraform.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <h3>GCP Data Engineer / Consultant</h3>
+            <div class="company">Reply S.p.A (various clients)</div>
+          </div>
+          <div class="period">Nov 2020 — Apr 2023</div>
+        </div>
+        <p>Consulted across finance and retail clients to integrate on-premises architecture with GCP and standardize ETL pipelines, orchestration, and observability.</p>
+        <ul>
+          <li>Designed hybrid GCP/on-prem integration for secure Dataproc jobs with BigQuery sinks.</li>
+          <li>Built templated Airflow DAG generation to reduce pipeline setup time.</li>
+          <li>Migrated legacy Dataiku ETL to Airflow + EMR and supported ML workflows.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <h3>Assistant Lecturer / Researcher</h3>
+            <div class="company">Hawassa University</div>
+          </div>
+          <div class="period">Sep 2016 — Sep 2018</div>
+        </div>
+        <p>Research and teaching support: data simulation, sensor data collection, visualization, and scripting in Python and R.</p>
+      </div>
+
+      <h2>Education</h2>
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <h3>Master of Science in Computer Engineering</h3>
+            <div class="company">University of Pisa</div>
+          </div>
+          <div class="period">2018 — 2020</div>
+        </div>
+        <p>Computer Systems and Networking specialization.</p>
+      </div>
+      <div class="job">
+        <div class="job-head">
+          <div>
+            <h3>Bachelor of Science in Electrical and Computer Engineering</h3>
+            <div class="company">Hawassa University</div>
+          </div>
+          <div class="period">2011 — 2016</div>
+        </div>
+      </div>
+    </main>
   </div>
-  
-  <!-- End Page Container -->
-</div>
-
-<footer class="w3-container w3-teal w3-center w3-margin-top">
-  <p>Find me on social media.</p>
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
-
 </body>
+</html>
