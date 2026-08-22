@@ -3,13 +3,15 @@
   start: "May 2023"
   end: "Current"
   location: "USA"
-  summary: "Landing, curating and publishing manufacturing IoT data for BI dashboards, ML model training, and real-time inference while enforcing GDPR/CCPA protections."
+  summary:  Worked in Ford Global Data Insights and Alaytics team helping optimize the auto manufacturing process accross timezones.
   responsibilities:
-    - "Delivered sub‑3s end-to-end streaming pipelines for real‑time anomaly detection and inference."
-    - "Reduced cloud processing costs by migrating heavy transforms to horizontally scalable low‑memory architectures."
-    - "Led cost‑savings and vulnerability remediation initiatives, adding automated tests to verify upgrades."
+    - "Delivered sub 3 sec end-to-end streaming pipeline for real‑time anomaly detection and inference."
+    - "Reduced cloud based processing costs by migrating heavy transforms to horizontally scalable low‑memory architectures."
+    - "Led cost‑savings and vulnerability remediation initiatives, adding automated tests to verify upgrades doesn't break workflows."
     - "Enabled faster ML experimentation by producing TFRecord training pipelines and deploying models to Vertex AI endpoints."
     - "Introduced CI/CD for data pipelines and infra (Cloud Build, Tekton, Terraform) and created dashboards to monitor latency."
+    - "Landing, curating and publishing manufacturing IoT data for BI dashboards, ML model training, and real-time inference while enforcing GDPR/CCPA protections."
+    - "Introduce Stateful Denormalization technique for flattening CDC stream data via Apache beam"
   technologies:
     - "GCP Dataflow"
     - "BigQuery"
@@ -23,8 +25,9 @@
   company: "Reply S.p.A (various clients)"
   start: "Nov 2020"
   end: "Apr 2023"
-  summary: "Consulted across finance and retail clients to integrate on-prem architecture with GCP and migrate/standardize ETL pipelines, orchestration, and observability." 
+  summary: Worked as a consultant for various Reply clients in Italy.
   responsibilities:
+    - "Consulted across finance and retail clients to integrate on-prem architecture with GCP and migrate/standardize ETL pipelines, orchestration, and observability."
     - "Designed hybrid GCP/on‑prem integration enabling Dataproc jobs to run securely with BigQuery sinks."
     - "Proposed Dataproc+GCS+BigQuery patterns and VPC designs to optimize cost and security."
     - "Built a Jinja2-based template library to auto-generate Airflow DAGs and reduce pipeline setup time."
@@ -41,8 +44,9 @@
   company: "Levi Strauss & Co (via Reply)"
   start: "2021"
   end: "2022"
-  summary: "Maintained Spark pipelines for analytics and ML on AWS; integrated metadata collection for observability and templated pipeline generation." 
+  summary: Worked as part of Levis EU data analytics team in Price & Promotion, inventory allocation and Sales forecast use cases.
   responsibilities:
+    - "Maintained Spark pipelines for analytics and ML on AWS; integrated metadata collection for observability and templated pipeline generation."
     - "Improved data quality and reduced ETL failures by optimizing SparkSQL and adding metadata-driven observability."
     - "Automated DAG generation from YAML specs, speeding pipeline deployments and supporting data-science exploration."
   technologies:
@@ -55,7 +59,7 @@
   company: "CSE (client)"
   start: "2020"
   end: "2020"
-  summary: "Optimized on-prem PySpark workloads and proposed migration architecture to AWS serverless services." 
+  summary: "Optimized on-prem PySpark workloads and proposed migration architecture to AWS serverless services."
   responsibilities:
     - "Cut job runtime and resource waste by optimizing PySpark scripts with caching and broadcast joins."
     - "Architected AWS Glue migration patterns and Step Functions orchestration for serverless ETL."
@@ -68,10 +72,10 @@
   company: "Hawassa University"
   start: "Sep 2016"
   end: "Sep 2018"
-  summary: "Research and teaching support: data simulation, sensor data collection, visualization and scripting in Python/R." 
+  summary: "Research and teaching support: data simulation, sensor data collection, visualization and scripting in Python/R."
   responsibilities:
     - "Developed reproducible Python/R scripts for simulations and visualizations used in research reports."
-    - "Delivered programming tutorials and lab support that improved student outcomes." 
+    - "Delivered programming tutorials and lab support that improved student outcomes."
   technologies:
     - "Python"
     - "R"
@@ -80,10 +84,10 @@
   company: "iCog Labs"
   start: "Jul 2015"
   end: "Feb 2016"
-  summary: "Worked on teaching tablet apps and cognitive robotics projects; trained speech-to-text models for Amharic." 
+  summary: "Worked on teaching tablet apps and cognitive robotics projects; trained speech-to-text models for Amharic."
   responsibilities:
     - "Built GoDot-based 3D educational environments and prepared Blender assets."
-    - "Led Amharic speech-to-text data labeling and model training pipelines using Sphinx." 
+    - "Led Amharic speech-to-text data labeling and model training pipelines using Sphinx."
   technologies:
     - "Java"
     - "GoDot"
