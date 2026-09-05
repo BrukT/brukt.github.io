@@ -2,3 +2,7 @@
   description: "Timely stateful processing for flattening CDC streams."
   url: "https://medium.com/@bruk101/real-time-cdc-stream-denormalization-using-apache-beam-timely-stateful-processing-e4a49d0ec478"
   icon: "fa-medium"
+- title: Integration of CoAP-based sensors into the KubeEdge Fog/Edge computing platform
+  description: "MSc Thesis report."
+  url: "https://etd.adm.unipi.it/t/etd-10152020-211154/"
+  icon: "fa-medium"
