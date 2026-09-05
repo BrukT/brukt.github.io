@@ -1,19 +1,25 @@
 # Bruk Gurmessa Resume
 
-This repository hosts the static resume site for Bruk Gurmessa. The page is designed as a modern, sample-inspired resume with a clean two-column layout, polished typography, and concise professional summary details.
+This repository hosts the static resume site for Bruk Gurmessa. The page is built with Jekyll and renders all content from structured YAML data files in `_data/`.
+
+## Structure
+
+- `index.html` — the main resume page. A Jekyll template that renders everything from `site.data`.
+- `cv.html` — a print-friendly static version.
+- `_data/header.yml` — name, title, location, summary, contacts, and core technologies.
+- `_data/experiences.yml` — work history (titles, companies + links, dates, summaries, responsibilities, and technologies).
+- `_data/education.yml` — degrees, institutions + links, and details.
+- `_data/certifications.yml` — certifications with verification links.
+- `_data/articles.yml` — featured articles.
+
+Edit the YAML data files to update the site; then push to `master`, and GitHub Pages rebuilds automatically.
 
 ## Local preview
 
-Run a simple local web server from the repository root:
+To preview with Jekyll:
 
 ```bash
-python3 -m http.server 8000
+jekyll serve
 ```
 
-Then open http://localhost:8000/ in a browser.
-
-## Notes
-
-- `index.html` contains the main resume page.
-- `cv.html` is a print-friendly version.
-- The experience content is stored in `_data/experiences.yml`.
+Then open http://localhost:4000/ in a browser.

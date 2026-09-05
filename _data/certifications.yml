@@ -1,0 +1,19 @@
+- name: "GCP Professional ML Engineer"
+  issuer: "Google Cloud"
+  date: "Sep 2025"
+  url: "https://www.credly.com/badges/8f16d6c9-9d16-464f-9c31-c556357c0afd/public_url"
+
+- name: "AWS ML Specialty (MLS-C01)"
+  issuer: "Amazon Web Services"
+  date: "Dec 2024"
+  url: "https://www.credly.com/badges/ac447329-747e-4fa6-8c23-7306920230b9/public_url"
+
+- name: "GCP Data Engineer"
+  issuer: "Google Cloud"
+  date: "May 2023"
+  url: "https://google.accredible.com/6b6e054d-aba3-40d9-9707-cbcc5b7fde3a"
+
+- name: "AWS Developer Associate (DVA-C01)"
+  issuer: "Amazon Web Services"
+  date: "Feb 2022"
+  url: "https://www.credly.com/badges/0a7a3ca7-4f42-4ad6-bc9b-148ec19e7e19/public_url"

@@ -1,0 +1,4 @@
+- title: "Real-time CDC stream denormalization using Apache Beam"
+  description: "Timely stateful processing for flattening CDC streams."
+  url: "https://medium.com/@bruk101/real-time-cdc-stream-denormalization-using-apache-beam-timely-stateful-processing-e4a49d0ec478"
+  icon: "fa-medium"

@@ -1,0 +1,13 @@
+- degree: "Master of Science in Computer Engineering"
+  institution: "University of Pisa"
+  url: "https://www.unipi.it"
+  start: "2018"
+  end: "2020"
+  details: "Computer Systems and Networking specialization. Thesis: integration of CoAP-based sensors into the KubeEdge Fog/Edge platform."
+
+- degree: "Bachelor of Science in Electrical and Computer Engineering"
+  institution: "Hawassa University"
+  url: "https://www.hu.edu.et"
+  start: "2011"
+  end: "2016"
+  details: "Computer Engineering stream."

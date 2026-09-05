@@ -1,5 +1,6 @@
 - title: "Data Engineer"
   company: "Ford Motor Company"
+  url: "https://www.ford.com"
   start: "May 2023"
   end: "Current"
   location: "USA"
@@ -23,6 +24,7 @@
 
 - title: "GCP Data Engineer / Consultant"
   company: "Reply S.p.A (various clients)"
+  url: "https://www.reply.com"
   start: "Nov 2020"
   end: "Apr 2023"
   summary: "Worked as a consultant for various Reply clients in Italy."
@@ -42,6 +44,7 @@
 
 - title: "Data Engineer (Levi Strauss & Co)"
   company: "Levi Strauss & Co (via Reply)"
+  url: "https://www.levi.com"
   start: "2021"
   end: "2022"
   summary: "Worked as part of Levi’s EU data analytics team on price and promotion, inventory allocation, and sales forecast use cases."
@@ -57,6 +60,7 @@
 
 - title: "Big Data Engineer (CSE - Banking Services)"
   company: "CSE (client)"
+  url: ""
   start: "2020"
   end: "2020"
   summary: "Optimized on-premises PySpark workloads and proposed a migration architecture to AWS serverless services."
@@ -70,6 +74,7 @@
 
 - title: "Assistant Lecturer / Researcher"
   company: "Hawassa University"
+  url: "https://www.hu.edu.et"
   start: "Sep 2016"
   end: "Sep 2018"
   summary: "Research and teaching support: data simulation, sensor data collection, visualization, and scripting in Python and R."
@@ -82,6 +87,7 @@
 
 - title: "Software Programmer (Intern)"
   company: "iCog Labs"
+  url: "https://icog-labs.com"
   start: "Jul 2015"
   end: "Feb 2016"
   summary: "Worked on teaching tablet applications and cognitive robotics projects; trained Amharic speech-to-text models."
